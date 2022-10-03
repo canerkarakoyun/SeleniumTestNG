@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istenen methodlar">
+    <test name="methodlar">
+        <classes>
+            <class name="tests.day16.C02_BeforeClassAfterClass">
+                <methods>
+                    <include name="bestBuyTesti"/>
+                </methods>
+            </class>
+            <class name="tests.day16.C01_BeforeMethodMethodAfterMethodMethod">
+                <methods>
+                    <exclude name="amazonTesti"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
