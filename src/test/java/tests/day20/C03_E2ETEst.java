@@ -22,7 +22,7 @@ public class C03_E2ETEst {
         // a. Username : manager
         // b. Password : Manager1!
         // 5. Login butonuna tıklayın.
-        hmcPage.userName.sendKeys(ConfigReader.getProperty("user"));
+        hmcPage.userName.sendKeys(ConfigReader.getProperty("hmcUser"));
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password"))
                 .sendKeys(Keys.ENTER).perform();
@@ -39,8 +39,8 @@ public class C03_E2ETEst {
         hmcPage.idUser.sendKeys("manager");
         actions.sendKeys(Keys.TAB).sendKeys("Happy Hotel")
                 .sendKeys(Keys.TAB).sendKeys("1500")
-                .sendKeys(Keys.TAB).sendKeys("10/02/2022")
-                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("10/13/2022")
+                .sendKeys(Keys.TAB).sendKeys("12/02/2022")
+                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("12/13/2022")
                 .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("2")
                 .sendKeys(Keys.TAB).sendKeys("2")
                 .sendKeys(Keys.TAB).sendKeys(faker.name().fullName())

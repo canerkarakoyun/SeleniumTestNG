@@ -7,7 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C03_ConfigReader {
-    @Test
+    @Test (groups = "gp2")
     public void test01() {
         // Bir Class olustur : PositiveTest
         // 2) Bir test method olustur positiveLoginTest()  https://www.hotelmycamp.com/ adresine git  login butonuna bas
@@ -16,7 +16,7 @@ public class C03_ConfigReader {
         hmcPage.login.click();
         // test data username: manager ,  test data password : Manager1!
                 // Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-        hmcPage.userName.sendKeys(ConfigReader.getProperty("userName"));
+        hmcPage.userName.sendKeys(ConfigReader.getProperty("hmcUser"));
         hmcPage.password.sendKeys(ConfigReader.getProperty("password"));
         hmcPage.logInButton.click();
         Assert.assertTrue(hmcPage.listOfUsers.isDisplayed());

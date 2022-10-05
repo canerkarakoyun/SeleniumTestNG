@@ -19,10 +19,10 @@ public class C03_ConfigReader_Action {
         hmcPage.login.click();
         // test data username: manager ,  test data password : Manager1!
         // Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-        hmcPage.userName.sendKeys(ConfigReader.getProperty("userName"));
+        hmcPage.userName.sendKeys(ConfigReader.getProperty("hmcUser"));
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("password")).sendKeys(Keys.ENTER).perform();
-        Assert.assertTrue(hmcPage.girisYapilamadi.isDisplayed());
+        Assert.assertTrue(hmcPage.girisYapildi.isDisplayed());
         Driver.closeDriver();
 
     }

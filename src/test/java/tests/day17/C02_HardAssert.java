@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import utilities.TestBaseBeforeClassAfterClass;
 
 public class C02_HardAssert extends TestBaseBeforeClassAfterClass {
-    @Test
+    @Test (groups = "gp1")
     public void test01() {
         // Bir class oluşturun: DependsOnTest
         // https://www.amazon.com/ adresine gidin.

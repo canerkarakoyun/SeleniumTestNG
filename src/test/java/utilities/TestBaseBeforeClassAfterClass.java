@@ -13,7 +13,7 @@ import java.time.Duration;
 public abstract class TestBaseBeforeClassAfterClass {
     protected WebDriver driver;
     protected Actions actions;
-    @BeforeClass
+    @BeforeClass (groups = "gp1")
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
@@ -21,7 +21,7 @@ public abstract class TestBaseBeforeClassAfterClass {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         actions=new Actions(driver);
     }
-    @AfterClass
+    @AfterClass (groups = "gp1")
     public void tearDown(){
         driver.quit();
     }

@@ -15,7 +15,7 @@ public class C02_BeforeClassAfterClass extends TestBaseBeforeClassAfterClass {
 
     }
 
-    @Test
+    @Test (groups = "gp1")
     public void techProTesti() {
         driver.get("https://techproeducation.com");
 
