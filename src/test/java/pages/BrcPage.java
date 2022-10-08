@@ -17,7 +17,8 @@ public class BrcPage {
     public WebElement userEmail;
 
     @FindBy (xpath = "//*[@class='w-100 btn btn-primary btn-lg']")
-    public WebElement ContinueReservationButton;
+    public WebElement basariliGiris;
 
-
+    @FindBy (xpath = "//*[@class='btn btn-primary']")
+    public WebElement ikinciLogin;
 }

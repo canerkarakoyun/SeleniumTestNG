@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import pages.BrcPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 import java.io.IOException;
@@ -51,7 +50,7 @@ public class C01_RaporluTest extends TestBaseRapor {
         extentTest.info("Ikinci kez login butonuna basildi");
 
         // -Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-        Assert.assertTrue(brcPage.ContinueReservationButton.isDisplayed());
+        Assert.assertTrue(brcPage.basariliGiris.isDisplayed());
         extentTest.pass("Sayfaya basarili sekilde giris yapildi");
 
     }
